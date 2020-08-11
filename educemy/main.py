@@ -1,4 +1,5 @@
 import sys
+from courses import Courses
 from os import system, name
 def clear():
     if name == 'nt':
@@ -24,8 +25,11 @@ def main():
 
         main_prompt = input('What would you like to do?')
 
+        course = Courses()
+
         if main_prompt == '1':
-            pass
+            clear()
+            course.display_details()
         elif main_prompt == '2':
             pass
         elif main_prompt == '3':
