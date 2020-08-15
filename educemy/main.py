@@ -1,5 +1,6 @@
 import sys
 from courses import Courses
+from students import Students
 from os import system, name
 def clear():
     if name == 'nt':
@@ -8,6 +9,8 @@ def clear():
         _ = system('clear')
 
 def main():
+    course = Courses()
+    students = Students()
     finish_operation = False
     while not finish_operation:
         print("""
@@ -16,23 +19,24 @@ def main():
         
         1. View Courses
         2. Enroll in course
-        3. Display your information
-        4. Update your information
-        5. Leave the course
-        6. Mark Course as completed
-        7. Exit Application 
+        3. Display all students
+        4. Display student information
+        5. Update Student Information
+        6. Delete Student Information
+        7. Complete course for student
+        8. Exit Application 
         """)
 
         main_prompt = input('What would you like to do?')
-
-        course = Courses()
 
         if main_prompt == '1':
             clear()
             course.display_details()
         elif main_prompt == '2':
+            students.enroll_student()
             pass
         elif main_prompt == '3':
+            students.display_all_student_details()
             pass
         elif main_prompt == '4':
             pass
