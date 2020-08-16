@@ -35,6 +35,7 @@ def main():
             students.display_student_information()
             pass
         elif main_prompt == '5':
+            students.update_student_information()
             pass
         elif main_prompt == '6':
             pass
