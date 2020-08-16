@@ -33,12 +33,10 @@ def main():
             students.display_all_student_details()
         elif main_prompt == '4':
             students.display_student_information()
-            pass
         elif main_prompt == '5':
             students.update_student_information()
-            pass
         elif main_prompt == '6':
-            pass
+            students.delete_student_information()
         elif main_prompt == '7':
             pass
         elif main_prompt == '8':

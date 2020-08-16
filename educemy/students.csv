@@ -1,4 +1,4 @@
 id,name,email,age,installment_amt,total_paid,installment_due,total_due,total_returned,status
 1,ram,a,a,10000,10000,1,10000,0,incomplete
 2,b,b,b,10000,10000,1,10000,0,incomplete
-3,hari,hari@h.com,21,10000,10000,1,10000,0,incomplete
+3,ram,sharma,22,10000,10000,1,10000,0,incomplete

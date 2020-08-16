@@ -145,6 +145,21 @@ class Students:
                     self.__students_list[student_index] = student
                     self.save_data()
                     finish_operation = True
+
+    def delete_student_information(self):
+        Functions.clear()
+        search_id = input("Enter Id of student: ")
+        student_index = self.find_student_by_id(search_id)
+        if student_index is None:
+            print("Student not found")
+        else:
+            student = self.__students_list[student_index]
+            self.print_student_details(student)
+            delete_choice = input("Would you like to delete the student information(y/n)?")
+            if delete_choice in ['y', 'Y']:
+                self.__students_list.remove(student)
+                self.save_data()
+
         pass
 
     def leave_course(self):
