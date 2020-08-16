@@ -160,13 +160,19 @@ class Students:
                 self.__students_list.remove(student)
                 self.save_data()
 
-        pass
-
     def leave_course(self):
         pass
 
     def complete_course(self):
-        pass
+        Functions.clear()
+        search_id = input("Enter Id of student: ")
+        student_index = self.find_student_by_id(search_id)
+        if student_index is None:
+            print("Student not found")
+        else:
+            student = self.__students_list[student_index]
+            student['status'] = 'complete'
+            student['total_returned'] = student['total_paid']
 
     def generate_student_dict(self, name, email, age, num_of_installments):
         id = self.generate_student_id()

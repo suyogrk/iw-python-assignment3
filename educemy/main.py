@@ -38,7 +38,7 @@ def main():
         elif main_prompt == '6':
             students.delete_student_information()
         elif main_prompt == '7':
-            pass
+            students.complete_course()
         elif main_prompt == '8':
             Functions.clear()
         elif main_prompt == '9':
